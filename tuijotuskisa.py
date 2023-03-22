@@ -29,7 +29,8 @@ class Peikko:
         """Muodostaa satunnaisen tekstin annetuista tavuista.
 
         :param tavut: ne tavut, joita palautettava teksti voi sisältää
-        :type tavut: Union[list[str], tuple[str]]
+        :type tavut: Union
+, tuple[str]]
         :param n: mukaan poimittavien tavujen maksimimäärä
         :type n: int
         :param erotin: tavujen väliin satunnaisesti laitettava merkki
@@ -56,9 +57,37 @@ class Peikko:
         """
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
 
-class Sankari:
 
 ### Kirjoita luokka Sankari tähän.
+class Sankari:
+    """Luokka, joka kuvaa Sankarin.
+
+    :ivar nimi: sankarin nimi
+    :type nimi: str
+    :ivar rohkeus: sankarin rohkeus, arvotaan
+    :type rohkeus: int
+    :ivar katseen_voima: sankarin katseen voimakkuus, arvotaan
+    :type katseen_voima: int
+
+    Julkiset metodit
+        arvo_hurraus()
+    """
+
+    HURRAAT = ("Jes", "Awesome", "Take that, loser", "Mahtavaa", "Voitto kotiin")
+
+    def __init__(self, nimi):
+        """Konstruktori."""
+        self.nimi = nimi
+        self.rohkeus = random.randint(8, 12)
+        self.katseen_voima = random.randint(4, 6)
+
+    def arvo_hurraus(self):
+        """Palauttaa satunnaisen hurraushuudahduksen.
+
+        :return: hurraava huudahdus
+        :rtype: str
+        """
+        return random.choice(self.HURRAAT)
 
 
 def hurraa(olio):
