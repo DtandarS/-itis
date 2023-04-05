@@ -112,7 +112,7 @@ class Sankari(Olento):
         arvo_hurraus()
     """
 
-    HURRAAT = ("Jes", "Awesome", "Take that, loser", "Mahtavaa", "Voitto kotiin")
+    HURRAAT = ("Lets gooooooo", "SHEEESH", "OTAPPA TÄSTÄ", "Mahtavaa", "TORILLE!!!")
 
     def __init__(self, nimi):
         """Konstruktori."""
